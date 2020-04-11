@@ -1,0 +1,35 @@
+#pragma once
+
+#include "GameEnums.h"
+#include "GameStructs.generated.h"
+
+USTRUCT(BlueprintType)
+struct FPivotParams
+{
+	GENERATED_USTRUCT_BODY()
+
+	UPROPERTY(BlueprintReadWrite, Category = "Pivot")
+	float PivotDirection;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Pivot")
+	EMovementDirection CompletedMovementDirection;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Pivot")
+	float CompletedStartTime;
+	
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Pivot")
+	EMovementDirection InterruptedMovementDirection;
+
+	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Pivot")
+	float InterruptedStartTime;
+
+	FPivotParams() 
+	:PivotDirection(0.0f)
+	,CompletedMovementDirection(EMovementDirection::Forwards)
+	,CompletedStartTime(0.0f)
+	,InterruptedMovementDirection(EMovementDirection::Forwards)
+	,InterruptedStartTime(0.0f)
+	{
+
+	}
+};
