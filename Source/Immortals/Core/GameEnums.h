@@ -60,3 +60,12 @@ enum class EMovementDirection : uint8
 	  Forwards		UMETA(DisplayName = "Forwards")
 	, Backwards		UMETA(DisplayName = "Backwards")
 };
+
+UENUM(BlueprintType)
+enum class ECardinalDirection : uint8
+{
+	  North		UMETA(DisplayName = "North")
+	, East		UMETA(DisplayName = "East")
+	, West		UMETA(DisplayName = "West")
+	, South		UMETA(DisplayName = "South")
+};
