@@ -27,6 +27,12 @@ public:
 	UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = "ALS Values")
 	void SetALS_GaitBPI(EGait ALS_Gait);
 
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "ALS Values")
+	void SetALS_StanceBPI(EStance ALS_Stance);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "ALS Values")
+	void SetALS_MovementModeBPI(EMovement_Mode ALS_MovementMode);
+
 	UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = "ALS Movement Settings")
 	void SetWalkingSpeed(float WalkingSpeed);
 
