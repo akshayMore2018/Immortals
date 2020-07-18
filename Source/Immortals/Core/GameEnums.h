@@ -11,7 +11,7 @@ enum class EStance : uint8
 
 
 UENUM(BlueprintType)
-enum class EIdleEntryStance : uint8
+enum class EIdleEntryState : uint8
 {
 	  N_Idle		UMETA(DisplayName = "N_Idle")
 	, LF_Idle		UMETA(DisplayName = "LF_Idle")

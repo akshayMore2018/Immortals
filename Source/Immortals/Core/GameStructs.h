@@ -9,7 +9,7 @@ struct FPivotParams
 {
 	GENERATED_USTRUCT_BODY()
 
-	UPROPERTY(BlueprintReadWrite, Category = "Pivot")
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Pivot")
 	float PivotDirection;
 
 	UPROPERTY(EditAnywhere,BlueprintReadWrite, Category = "Pivot")

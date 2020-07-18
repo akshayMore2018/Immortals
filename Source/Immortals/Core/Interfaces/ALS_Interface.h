@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "UObject/Interface.h"
 #include "Core/GameEnums.h"
+#include "Core/GameStructs.h"
 #include "ALS_Interface.generated.h"
 
 // This class does not need to be modified.
@@ -41,4 +42,14 @@ public:
 
 	UFUNCTION(BlueprintCallable,BlueprintImplementableEvent, Category = "ALS Movement Settings")
 	void SetSprintingSpeed(float SprintingSpeed);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "ALS Anim Notify")
+	void AnimNotify_PivotBPI(FPivotParams PivotParams);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "ALS Anim Notify")
+	void AnimNotify_IdleEntryStateBPI(EIdleEntryState IdleEntryState);
+
+	UFUNCTION(BlueprintCallable, BlueprintImplementableEvent, Category = "ALS Anim Notify")
+	void AnimNotify_TurnInPlaceBPI(const TSoftObjectPtr<UAnimMontage>& TurnInPlaceMontage, bool ShouldTurnInPlace, bool TurningInPlace, bool TurningRight);
+
 };
